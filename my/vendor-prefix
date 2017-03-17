@@ -1,0 +1,8 @@
+various browsers vendor-prefix /*prefixion*/:
+
+-moz-    : firefox and which browser use Mozilla engine
+-Webkit- : chrome, safari and which browser use Webkit engine
+-o-      : opera
+-ms-     : internet explore(ie)
+
+you should place the css in the end if it don't have the vendor-prefix!!!
