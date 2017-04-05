@@ -1,0 +1,44 @@
+By tiandiduwu Wednesday, April Fifth,2017;Sprinkle(light rain)
+
+OverView: difference of Function expression and Function declaration:
+Check out the code below:
+  
+#code begin
+sayName();//tiandiduwu
+var sayName = function() {
+    console.info('tiandiduwu');
+};
+function sayName() {
+    console.info('tiandiduwuXiaoXiao');
+}
+sayName();//tiandiduwuXiaoXiao
+#code end 
+
+Notice:
+    Function declaration will be promotion when browser analysis but Function expression don't,so the result possibly
+  
+  
+there is a test question below:
+
+#code begin
+function Foo() {
+    getName = function () { alert (1); };
+    return this;
+}
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3);};
+var getName = function () { alert (4);};
+function getName() { alert (5);}
+ 
+//please write the output result
+Foo.getName();//2
+getName();//4: you get the answer after read the words at article start 
+Foo().getName();//1
+getName();//1
+new Foo.getName();//2
+new Foo().getName();//3
+new new Foo().getName();//3
+#code end
+
+all the points from the url:https://juejin.im/entry/58db95eaac502e0058f8472e
+
